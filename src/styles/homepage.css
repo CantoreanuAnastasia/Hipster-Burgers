@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+/* this 'content' container acts like a body for this project since it was a requirment to append html elements via js to it */
+#content {
+    background-color: var(--background-color);
+    color: var(--main-font-color);
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+#homepage,
+#socialmedia {
+    display: flex;
+    flex-direction: column;
+}
+
+#homepage-body {
+    background: url('../images/all-assets/home.png') bottom 4.5rem left no-repeat;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2rem solid var(--main-font-color);
+    padding-bottom: 2rem;
+}
+
+#nav-leftside {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    align-items: flex-end;
+}
+
+#nav-rightside {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    padding-right: 3rem;
+    align-items: center;
+}
+
+#homepage-body {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    padding-left: 3rem;
+    gap: 2rem;
+}
+
+h1 {
+    font-size: 3.6rem;
+    font-weight: 600;
+}
+
+img {
+    width: 20px;
+    height: auto;
+}
+
+#socialmedia {
+    padding-top: 3rem;
+    gap: 1.7rem;
+}
+
+#video-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    border-left: 0.1rem solid var(--main-font-color);
+    height: 100vh;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+#home:hover,
+#menu:hover,
+#our-story:hover,
+#contact:hover {
+    border-bottom: 0.2rem solid var(--second-font-color);
+    padding-bottom: 0.2rem;
+    transition: 0.1s;
+}
+
+#search,
+#user,
+#shopping-cart:hover {
+    cursor: pointer;
+}
+
+#language-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+#language-container>p {
+    font-size: 1.3rem;
+}
+
+#language-container>#language-en:hover,
+#language-ro:hover {
+    color: var(--second-font-color);
+    cursor: pointer;
+}
+
+#nav-leftside>p {
+    font-size: 1.5rem;
+}
+
+#home,
+#menu,
+#our-story,
+#contact {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#nav-leftside>#logo {
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--second-font-color);
+}
+
+#shopping-cart {
+    width: 1.5rem;
+}
+
+#socialmedia>img {
+    width: 2rem;
+}
+
+#logo1 {
+    padding-top: 16rem;
+    font-size: 13rem;
+    transform: rotate(-50deg);
+}
+
+#intro-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+#intro {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+#discount-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-left: 15rem;
+    padding-top: 9rem;
+}
+
+#limited {
+    padding-top: 6rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+#code {
+    color: var(--discount-color);
+    font-size: 1.3rem;
+    font-weight: 800;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#discount-info {
+    font-size: 1rem;
+    padding-top: 4rem;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#location {
+    width: fit-content;
+    height: fit-content;
+}
+
+#arrow {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    width: 24rem;
+    height: auto;
+}

@@ -1,4 +1,3 @@
-
 const path = require("path");
 
 module.exports = {
@@ -30,7 +29,11 @@ module.exports = {
               attrs: [":src"]
             }
           }
-        }
+        },
+        {
+          test: /\.css$/,
+          use: ["style-loader", "css-loader"],
+        },
     ],
   },
 };

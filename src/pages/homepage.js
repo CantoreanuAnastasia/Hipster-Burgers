@@ -6,6 +6,8 @@ import facebookIconImage from '../images/all-assets/facebook.svg'
 import instagramIconImage from '../images/all-assets/instagram.svg'
 import tikTokIconImage from '../images/all-assets/tik-tok.svg'
 import promoVideo from '../images/all-assets/promo-video.mp4'
+import locationImage from '../images/all-assets/location.png'
+import arrowImage from '../images/all-assets/arrow.svg'
 
 const homepage = function() {
     const content = document.querySelector('#content')
@@ -49,22 +51,27 @@ const homepage = function() {
     navLeftSide.appendChild(contact)
 
     // Navigation right side
+    const navRightSide = document.createElement('div')
+    navRightSide.id = 'nav-rightside'
+    navbar.appendChild(navRightSide)
+
     const search = document.createElement('img')
     search.id = 'search'
     search.src = searchImage
-    navLeftSide.appendChild(search)
+    navRightSide.appendChild(search)
 
     const user = document.createElement('img')
     user.id = 'user'
     user.src = userImage
-    navLeftSide.appendChild(user)
+    navRightSide.appendChild(user)
 
     const shoppingCart = document.createElement('img')
     shoppingCart.id = 'shopping-cart'
     shoppingCart.src = shoppingCartImage
-    navLeftSide.appendChild(shoppingCart)
+    navRightSide.appendChild(shoppingCart)
 
     //Homepage body
+    
     const homepageBody = document.createElement('div')
     homepageBody.id = 'homepage-body'
     homepage.appendChild(homepageBody)
@@ -97,41 +104,81 @@ const homepage = function() {
     logoContainer.id = 'logo-container'
     homepageBody.appendChild(logoContainer)
 
-    const logo1 = document.createElement('p')
-    logo1.id = 'logo'
-    logo1.innerText = 'Street 96\''
-    logoContainer.appendChild(logo1)
-
     const introContainer = document.createElement('div')
     introContainer.id = 'intro-container'
     homepageBody.appendChild(introContainer)
 
+
+    const h1 = document.createElement('h1')
+    h1.innerText ='Welcome to our brand new burger restaurant!'
+    introContainer.appendChild(h1)
+
     const intro = document.createElement('p')
     intro.id = 'intro'
-    intro.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repellat ipsa neque temporibus perspiciatis itaque impedit ipsum. Fugit, aperiam culpa libero fuga minus perspiciatis amet nihil quidem excepturi, tempora vitae!'
+    intro.innerText = 'We are thrilled to have you here and can\'t wait to serve you some of the best burgers in town. Our menu is packed with delicious options, from classic burgers and loaded fries to vegetarian and gluten-free options. We take pride in using only the freshest ingredients in our dishes, so you can enjoy a truly mouth-watering experience. Come on in and make yourself at home - we\'re excited to have you join our burger-loving community!'
     introContainer.appendChild(intro)
 
-    const videoLang = document.createElement('div')
-    videoLang.id = 'video-language'
-    homepageBody.appendChild(videoLang)
+    const arrow = document.createElement('img')
+    arrow.id = 'arrow'
+    arrow.src = arrowImage
+    introContainer.appendChild(arrow)
+
+    const discountContainer = document.createElement('div')
+    discountContainer.id = 'discount-container'
+    introContainer.appendChild(discountContainer) 
+
+    const limited = document.createElement('p')
+    limited.id = 'limited'
+    limited.innerText = '🔥Limited time offer!🔥'
+    discountContainer.appendChild(limited)
+
+    const code = document.createElement('p')
+    code.id = 'code'
+    code.innerText = '#JUSTOPENED70'
+    discountContainer.appendChild(code)
+
+    const discountInfo = document.createElement('p')
+    discountInfo .id = 'discount-info'
+    discountInfo.innerText = 'Add this code to your shopping-cart before your first purchase for 70% discount on every burger.🤤'
+    discountContainer.appendChild(discountInfo)
+
+    const videoContainer = document.createElement('div')
+    videoContainer.id = 'video-container'
+    homepageBody.appendChild(videoContainer)
 
     const video = document.createElement('video')
     video.id = 'video'
+    video.volume = 0.1
     video.src = promoVideo
     video.setAttribute('controls', 'controls')
-    video.setAttribute('loop', 'loop')
-    video.setAttribute('autoplay', 'autoplay')
-    videoLang.appendChild(video)
+    video.setAttribute('muted', 'muted')
+    // video.setAttribute('loop', 'loop')
+    // video.setAttribute('autoplay', 'autoplay')
+    videoContainer.appendChild(video)
+
+    const location = document.createElement('img')
+    location.id = 'location'
+    location.src = locationImage
+    videoContainer.appendChild(location)
+
+    const langContainer = document.createElement('div')
+    langContainer.id = 'language-container'
+    navRightSide.appendChild(langContainer)    
 
     const engLang = document.createElement('p')
-    engLang.id = 'language'
+    engLang.id = 'language-en'
     engLang.innerText= 'EN'
-    videoLang.appendChild(engLang)
+    langContainer.appendChild(engLang)
 
-    const roLang = document.createElement('span')
-    roLang.id = 'language'
-    roLang.innerText= '| RO'
-    videoLang.appendChild(roLang)
+    const barLang = document.createElement('p')
+    barLang.id = 'language-bar'
+    barLang.innerText= '|'
+    langContainer.appendChild(barLang)
+
+    const roLang = document.createElement('p')
+    roLang.id = 'language-ro'
+    roLang.innerText= 'RO'
+    langContainer.appendChild(roLang)
 
 }
 export default homepage
