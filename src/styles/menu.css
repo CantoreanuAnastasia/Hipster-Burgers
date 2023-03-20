@@ -1,0 +1,165 @@
+#menu-body {
+    display: flex;
+    flex-direction: row;
+}
+
+#left-arrow,
+#right-arrow {
+    width: 16%;
+    height: auto;
+}
+
+#left-nav,
+#right-nav {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 30em;
+}
+
+#leftarrow-cont,
+#rightarrow-cont {
+    padding-top: 20em;
+    display: flex;
+}
+
+
+#leftarrow-cont {
+    justify-content: flex-end;
+}
+
+#left-arrow,
+#right-arrow,
+#share-icon {
+    cursor: pointer;
+}
+
+#left-arrow:hover,
+#right-arrow:hover {
+    filter: invert(88%) sepia(2%) saturate(6%) hue-rotate(329deg) brightness(89%) contrast(94%);
+    transition: 150ms;
+}
+
+.slide>img {
+    width: auto;
+    height: 100%;
+}
+
+#price-cont {
+    display: flex;
+    justify-content: center;
+}
+
+#price {
+    padding-top: 3em;
+    font-size: 3.2vw;
+    text-decoration: underline;
+}
+
+#share-cont {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    padding-top: 8em;
+    padding-left: 1em;
+}
+
+#share {
+    font-size: 1.5em;
+}
+
+.carousel {
+    width: 60%;
+    height: auto;
+    position: relative;
+    top: 50%;
+    left: -1%;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+
+.carousel-button {
+    z-index: 2;
+    border: none;
+    font-size: 4rem;
+    top: 40%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: #b5b5b500;
+
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    color: #ffffff;
+    background-color: #00000033;
+}
+
+.carousel-button:focus {
+    outline: 1px solid #000000;
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+#description-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#description-title {
+    font-size: 2em;
+    font-weight: 600;
+    padding-top: 1em;
+}
+
+#description {
+    font-size: 1.3em;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-weight: 300;
+    text-align: center;
+}
+
+#add-to-cart {
+    display: flex;
+    margin-top: 23em;
+    align-self: center;
+    padding: 1.5em 4em 1.5em 4em;
+    background-color: var(--second-font-color);
+    color: #010101;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.3em;
+}
+
+#add-to-cart:active {
+    background-color: #e1ac1b90;
+}

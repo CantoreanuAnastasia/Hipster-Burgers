@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
-
 /* this 'content' container acts like a body for this project since it was a requirment to append html elements via js to it */
 #content {
     background-color: var(--background-color);
@@ -7,7 +5,10 @@
     height: 100vh;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
+}
 
+#homepage {
+    display: flex;
 }
 
 #homepage,
@@ -17,7 +18,7 @@
 }
 
 #homepage-body {
-    background: url('../images/all-assets/home.png') bottom 4.5rem left no-repeat;
+    background: url("http://127.0.0.1:5500/dist/home%20.png") bottom 4.5rem left no-repeat;
 }
 
 #navbar {
@@ -27,6 +28,7 @@
     align-items: center;
     border-bottom: 0.2rem solid var(--main-font-color);
     padding-bottom: 2rem;
+
 }
 
 #nav-leftside {
@@ -49,18 +51,17 @@
 #homepage-body {
     display: flex;
     flex-direction: row;
-    height: fit-content;
     padding-left: 3rem;
     gap: 2rem;
 }
 
 h1 {
-    font-size: 3.6rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
 img {
-    width: 20px;
+    width: 1.3em;
     height: auto;
 }
 
@@ -72,13 +73,11 @@ img {
 #video-container {
     display: flex;
     flex-direction: column;
-    height: fit-content;
     border-left: 0.1rem solid var(--main-font-color);
-    height: 100vh;
 }
 
 video {
-    width: 100%;
+    max-width: 45em;
     height: auto;
 }
 
@@ -139,11 +138,6 @@ video {
     width: 2rem;
 }
 
-#logo1 {
-    padding-top: 16rem;
-    font-size: 13rem;
-    transform: rotate(-50deg);
-}
 
 #intro-container {
     display: flex;
@@ -191,14 +185,34 @@ video {
 }
 
 #location {
-    width: fit-content;
-    height: fit-content;
+    width: 100%;
+    height: auto;
 }
 
 #arrow {
     position: absolute;
-    top: 40%;
-    left: 20%;
-    width: 24rem;
+    top: 35%;
+    left: 23%;
+    width: clamp(13%, 17%, 25%);
     height: auto;
+}
+
+@media (max-width:1584px) {
+    #arrow {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+
+    #home,
+    #menu,
+    #our-story,
+    #contact {
+        font-size: 12px;
+    }
+
+    #socialmedia>img {
+        width: 1rem;
+    }
 }
