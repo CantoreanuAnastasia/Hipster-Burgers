@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 #our-story-body {
     display: flex;
     flex-direction: row;
@@ -35,11 +39,12 @@
     font-size: 4em;
     font-weight: 800;
     color: #000000;
+    font-family: 'Permanent Marker', cursive;
 }
 
 #text-container2 {
     display: flex;
-    padding-top: 6em;
+    padding-top: 3em;
     padding-right: 2em;
     padding-left: 1em;
     flex-direction: column;
@@ -54,10 +59,11 @@
     font-size: 3em;
     font-weight: 600;
     color: var(--second-font-color);
+    font-family: 'Pacifico', cursive;
 }
 
 #text2 {
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 #sideimg-cont {

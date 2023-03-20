@@ -3,11 +3,13 @@ import './styles/root.css'
 import './styles/homepage.css'
 import './styles/menu.css'
 import './styles/our-story.css'
+import './styles/contact.css'
 import createHomepage from './pages/homepage.js';
 import createMenu from './pages/menu.js';
 import firstLoad from './pages/firstLoad';
 import render from './pages/render';
 import createOurStory from './pages/our-story.js';
+import createContact from './pages/contact'
 
 
 firstLoad()
@@ -30,4 +32,9 @@ homeButton.addEventListener('click', function(){
 ourStoryButton.addEventListener('click', function(){
     render()
     createOurStory()
+})
+
+contactButton.addEventListener('click', function(){
+    render()
+    createContact()
 })

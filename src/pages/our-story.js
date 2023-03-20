@@ -14,7 +14,7 @@ const createOurStory = function() {
 
     const text = document.createElement('p')
     text.id = 'text'
-    text.innerText = 'Our Story'
+    text.innerText = '#ourstory'
     textContainer.appendChild(text)
 
     const textContainer2 = document.createElement('div')
