@@ -88,8 +88,8 @@ const createHomepage = function() {
     video.src = promoVideo
     video.setAttribute('controls', 'controls')
     video.setAttribute('muted', 'muted')
-    // video.setAttribute('loop', 'loop')
-    // video.setAttribute('autoplay', 'autoplay')
+    video.setAttribute('loop', 'loop')
+    video.setAttribute('autoplay', 'autoplay')
     videoContainer.appendChild(video)
 
     const location = document.createElement('img')
